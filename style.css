@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    overflow-y: scroll;
+}
+p {
+    font-size: small;
+    text-wrap: wrap;
+}
+input {
+    width: 75%;
+}
+.centered {
+    text-align: center;
+}
+#sidebar {
+    width: 27vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+}
+#planview {
+    width: calc(70vw - 20px);
+    height: 100vh;
+    padding: 10px;
+}
+.draggable {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+.draggable:hover {
+    background-color: #ccc;
+}
+.droppable {
+    max-height: 20vh;
+    overflow-y: scroll;
+    border: 2px dashed #aaa;
+    padding: 20px;
+
+}
+.credit-hours {
+    bottom: 12px;
+}
+#plangrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.plannedCourse {
+    margin: 2px;
+    padding: 2px;
+    font-size: 14px;
+}
+.plannedCourse button {
+    float: right;
+}
