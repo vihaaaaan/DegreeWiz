@@ -21,6 +21,7 @@ input {
     height: 100vh;
     background-color: #f0f0f0;
     overflow-y: auto;
+    text-align: center;
 }
 #planview {
     width: calc(70vw - 20px);
@@ -41,10 +42,13 @@ input {
     overflow-y: scroll;
     border: 2px dashed #aaa;
     padding: 20px;
-
+}
+#searchInput {
+    width:100px;
 }
 .credit-hours {
     bottom: 12px;
+    font-size: 12px;
 }
 #plangrid {
     display: grid;

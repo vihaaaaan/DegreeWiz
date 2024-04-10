@@ -52,20 +52,29 @@ function displayResults(results) {
 
 function createDroppableBoxes() {
     var planGrid = document.getElementById("plangrid");
-    for (var i = 0; i < 8; i++) {
-        var semesterBox = document.createElement("div");
-        semesterBox.id = "semester" + i;
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 2; j++) {
+            var semesterBox = document.createElement("div");
+            semesterBox.id = "semester" + i;
 
-        semesterBox.className = "droppable";
-        semesterBox.addEventListener("drop", dropClass);
-        semesterBox.addEventListener("dragover", allowDrop);
+            semesterBox.className = "droppable";
+            semesterBox.addEventListener("drop", dropClass);
+            semesterBox.addEventListener("dragover", allowDrop);
 
-        semesterBox.innerHTML = `
-            <div class="title">AUT 23</div>
-            <div class="credit-hours">Total Credit Hours: 0</div>
-        `;
+            if (j == 0) {
+                semesterBox.innerHTML = `
+                    <div class="title">AUT ${23 + j + i}</div>
+                    <div class="credit-hours">Total Credit Hours: 0</div>
+                `;
+            } else {
+                semesterBox.innerHTML = `
+                    <div class="title">SPR ${23 + j + i}</div>
+                    <div class="credit-hours">Total Credit Hours: 0</div>
+                `;
+            }
 
-        planGrid.appendChild(semesterBox);
+            planGrid.appendChild(semesterBox);
+        }
     }
 }
 
@@ -76,18 +85,24 @@ function drag(event) {
 function dropClass(event) {
     event.preventDefault();
 
-    var droppable = event.target;
+    var droppable;
+    if (event.target.className == "droppable") {
+        droppable = event.target;
+    } else {
+        // user is dropping element into another element in the box
+        droppable = event.target.parentElement;
+    }
 
     if (droppable.className == "droppable") {
         var data = event.dataTransfer.getData("text");
         var draggable = document.getElementById(data);
-        
 
         var newElement = document.createElement("div");
         newElement.className = "plannedCourse";
         newElement.innerText = draggable.getAttribute('name');
         newElement.setAttribute('hours', draggable.getAttribute('hours'));
 
+        // handle the X button
         var removeButton = document.createElement("button");
         removeButton.innerText = "x";
         removeButton.onclick = function() {
@@ -104,6 +119,7 @@ function dropClass(event) {
 
 function allowDrop(event) {
     event.preventDefault();
+    event.stopPropagation();
 }
 
 function updateCreditHours(droppableElement) {
