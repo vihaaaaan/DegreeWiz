@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #d4edf7;
 
     display: flex;
     overflow-y: scroll;
@@ -19,7 +20,7 @@ input {
 #sidebar {
     width: 27vw;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #5ea2fa;
     overflow-y: auto;
     text-align: center;
 }
@@ -32,15 +33,15 @@ input {
     cursor: pointer;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #e0e0e0;
+    background-color: #b1c8f2;
 }
 .draggable:hover {
-    background-color: #ccc;
+    background-color: #aec3df;
 }
 .droppable {
     max-height: 20vh;
     overflow-y: scroll;
-    border: 2px dashed #aaa;
+    border: 2px dashed #3917a6;
     padding: 20px;
 }
 #searchInput {
