@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d4edf7;
+    background-color: #ffffff;
 
     display: flex;
     overflow-y: scroll;
@@ -17,10 +17,14 @@ input {
 .centered {
     text-align: center;
 }
+#header {
+    background-color: rgb(242, 242, 242);
+}
 #sidebar {
     width: 27vw;
     height: 100vh;
-    background-color: #5ea2fa;
+    background-color: #2f76d3;
+    color:#ffffff;
     overflow-y: auto;
     text-align: center;
 }
@@ -33,10 +37,10 @@ input {
     cursor: pointer;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #b1c8f2;
+    background-color: #6297d0;
 }
 .draggable:hover {
-    background-color: #aec3df;
+    background-color: rgb(121, 153, 196);
 }
 .droppable {
     max-height: 20vh;
