@@ -130,3 +130,11 @@ function updateCreditHours(droppableElement) {
     });
     creditHoursElement.textContent = "Total Credit Hours: " + totalCreditHours;
 }
+
+function savePlan() {
+    // not implemented
+}
+
+function checkPrerequisites() {
+    // not implemented
+}

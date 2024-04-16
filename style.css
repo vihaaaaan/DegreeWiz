@@ -22,7 +22,7 @@ input {
 }
 #sidebar {
     width: 27vw;
-    height: 100vh;
+    height: 105vh;
     background-color: #2f76d3;
     color:#ffffff;
     overflow-y: auto;
@@ -45,15 +45,23 @@ input {
 .droppable {
     max-height: 20vh;
     overflow-y: scroll;
-    border: 2px dashed #3917a6;
+    border: 1px dashed #000000;
     padding: 20px;
 }
 #searchInput {
-    width:100px;
+    width:50%;
 }
 .credit-hours {
     bottom: 12px;
     font-size: 12px;
+}
+#endButtons {
+    margin-top: 20px;
+}
+#endButtons button {
+    float: right;
+    padding: 8px;
+    margin-left: 10px;
 }
 #plangrid {
     display: grid;
