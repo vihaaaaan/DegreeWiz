@@ -14,7 +14,8 @@ Alternatively, if you want to directly interact with the prototype then download
 A Markdown document detailing how to use the application is shown in the `/doc` folder [here](./doc/User_Documentation.md).
 
 ## UML Diagrams
-UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
+UML diagrams are shown in the `/doc/uml` folder, and are also shown below.\
+![sequence](./doc/uml/sequence_diagram.png)\
 
 ## Marketing Material
 ### Flyer
