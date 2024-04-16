@@ -5,6 +5,9 @@
 DegreeWiz is a tool to help students create academic plans and discover classes.
 This repository features a rudimentary prototype with the OSU class API.
 
+## User Documentation
+A Markdown document detailing how to use the application is shown [here](./doc/User_Documentation.md).
+
 ## Prototype
 A video of the prototype in practice is shown in the video below.
 ![https://www.youtube.com/watch?v=DUdcLUP4lcw](https://www.youtube.com/watch?v=DUdcLUP4lcw)
