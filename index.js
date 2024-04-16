@@ -7,6 +7,7 @@ async function searchClasses() {
     
     var url = "https://content.osu.edu/v2/classes/search?q=" + encodeURIComponent(query);
 
+    // testing to ensure the API works.
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -44,7 +45,7 @@ function displayResults(results) {
                 <p>${listing.getAttribute('description')}</p>
                 <p>Credit Hours: ${listing.getAttribute('hours')}</p>
             `;
-            
+
             resultsContainer.appendChild(listing);
         }
     });
@@ -112,6 +113,11 @@ function dropClass(event) {
 
         newElement.appendChild(removeButton);
 
+        // example tags, not yet implemented
+        newElement.onclick = function() {
+            showCourseInfo(this.childNodes[0].textContent);
+        };
+
         droppable.appendChild(newElement);
         updateCreditHours(droppable);
     }
@@ -120,6 +126,23 @@ function dropClass(event) {
 function allowDrop(event) {
     event.preventDefault();
     event.stopPropagation();
+}
+
+function showCourseInfo(courseName) {
+    var tagBox = document.getElementById('courseInfo');
+
+    // if fully implemented, would confer with a database
+    // for example purposes, set example tags are used
+    var tags = 'easy';
+    if (courseName == 'ENGR 1282.04H') tags = 'team-focused, project-based';
+    if (courseName == 'MATH 1151') tags = 'difficult, homework-heavy';
+
+    tagBox.innerText = 'Students have tagged ' + courseName + ' as: '+ tags;
+}
+
+function clearCourseInfo() {
+    var tagBox = document.getElementById('courseInfo');
+    tagBox.innerText = '';
 }
 
 function updateCreditHours(droppableElement) {
