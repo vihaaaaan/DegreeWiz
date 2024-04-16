@@ -16,6 +16,9 @@ A Markdown document detailing how to use the application is shown in the `/doc` 
 ## UML Diagrams
 UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
 
+### Use Case Diagram:
+<img src="./doc/uml/usecase_diagram.png" alt="usecase" width="600"/>
+
 ### Class Diagram:
 <img src="./doc/uml/class_diagram.png" alt="class" width="600"/>
 
