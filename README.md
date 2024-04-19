@@ -10,6 +10,10 @@ A video of the prototype in practice is shown below.\
 [![video](http://i3.ytimg.com/vi/DUdcLUP4lcw/hqdefault.jpg)](https://www.youtube.com/watch?v=DUdcLUP4lcw)\
 Alternatively, if you want to directly interact with the prototype then download the repository and run the `index.html` file.
 
+A mock-up of the menu where users can browse and select other academic plans, created in Figma, is shown below.
+<img src="degreewiz_figma_mockup.png" alt="sequence" width="600"/>
+[Link](https://www.figma.com/file/KefweSLmxGArNsIIRRb2tC/DegreeWiz?type=design&mode=design&t=OsJxfbQWIQ3lHCmF-1)
+
 ## User Documentation
 A Markdown document detailing how to use the application is shown in the `/doc` folder [here](./doc/User_Documentation.md).
 
@@ -25,15 +29,12 @@ UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
 ### Sequence Diagram:
 <img src="./doc/uml/sequence_diagram.png" alt="sequence" width="600"/>
 
-### Figma Mockup:
-<img src="degreewiz_figma_mockup.png" alt="sequence" width="600"/>
-https://www.figma.com/file/KefweSLmxGArNsIIRRb2tC/DegreeWiz?type=design&mode=design&t=OsJxfbQWIQ3lHCmF-1
-
 ## Marketing Materials
 ### Flyer
 <img src="degreewiz_flyer.png" alt="sequence" width="600"/>
 
 ### Video
+[![video](http://i3.ytimg.com/vi//hqdefault.jpg)](https://www.youtube.com/watch?v=)\
 
 *Ryan Jung: jung.876@osu.edu*\
 *Vihaan Vulpala: vulpala.1@osu.edu*\
