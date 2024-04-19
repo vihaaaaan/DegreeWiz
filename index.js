@@ -6,11 +6,12 @@ async function searchClasses() {
     var query = document.getElementById("searchInput").value;
     
     var url = "https://content.osu.edu/v2/classes/search?q=" + encodeURIComponent(query);
+    console.assert(url.includes("https://content.osu.edu/v2/classes/search?q="), "URL does not match expected format.");
 
-    // testing to ensure the API works.
     try {
         const response = await fetch(url);
         const data = await response.json();
+        console.assert(Array.isArray(data.data.courses), "Expected data.data.courses to be an array.");
         displayResults(data.data.courses);
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -18,16 +19,20 @@ async function searchClasses() {
 }
 
 function displayResults(results) {
+    console.assert(Array.isArray(results), "Expected results to be an array.");
     var resultsContainer = document.getElementById("searchResults");
     resultsContainer.innerHTML = "";
 
     var courseNames = [];
 
     results.forEach(function(course, index) {
+        console.assert(course.course, "Expected course data to be present.");
         if (!courseNames.includes(course.course.title)) {
             courseNames.push(course.course.title);
 
             var listing = document.createElement("div");
+            console.assert(listing !== null, "Failed to create a div element.");
+
             listing.className = "draggable";
             listing.id = "result_" + index;
 
@@ -35,7 +40,6 @@ function displayResults(results) {
             listing.setAttribute('courseTitle', course.course.shortDescription);
             listing.setAttribute('hours', course.course.minUnits);
             listing.setAttribute('description', course.course.description);
-
 
             listing.draggable = true;
             listing.setAttribute("ondragstart", "drag(event)");
@@ -149,9 +153,12 @@ function updateCreditHours(droppableElement) {
     var creditHoursElement = droppableElement.querySelector('.credit-hours');
     var totalCreditHours = 0;
     droppableElement.querySelectorAll('.plannedCourse').forEach(function(course) {
-        totalCreditHours += parseInt(course.getAttribute('hours'));
+        var hours = parseInt(course.getAttribute('hours'));
+        console.assert(!isNaN(hours), "Expected 'hours' to be a number.");
+        totalCreditHours += hours;
     });
     creditHoursElement.textContent = "Total Credit Hours: " + totalCreditHours;
+    console.assert(typeof totalCreditHours === 'number', "Total Credit Hours calculation failed, expected a number.");
 }
 
 function savePlan() {
