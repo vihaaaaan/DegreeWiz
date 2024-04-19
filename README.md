@@ -11,7 +11,7 @@ A video of the prototype in practice is shown below.\
 Alternatively, if you want to directly interact with the prototype then download the repository and run the `index.html` file.
 
 A mock-up of the menu where users can browse and select other academic plans, created in Figma, is shown below.
-<img src="./doc/degreewiz_figma_mockup.png" alt="sequence" width="600"/>\
+<img src="./doc/degreewiz_figma_mockup.png" alt="figma mockup" width="600"/>\
 [Link](https://www.figma.com/file/KefweSLmxGArNsIIRRb2tC/DegreeWiz?type=design&mode=design&t=OsJxfbQWIQ3lHCmF-1)
 
 ## User Documentation
@@ -31,7 +31,7 @@ UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
 
 ## Marketing Materials
 ### Flyer
-<img src="./doc/degreewiz_flyer.png" alt="sequence" width="600"/>
+<img src="./doc/degreewiz_flyer.png" alt="flyer" width="600"/>
 
 ### Video
 [![video](http://i3.ytimg.com/vi//hqdefault.jpg)](https://www.youtube.com/watch?v=)\
