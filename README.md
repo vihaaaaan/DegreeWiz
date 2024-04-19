@@ -25,6 +25,9 @@ UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
 ### Sequence Diagram:
 <img src="./doc/uml/sequence_diagram.png" alt="sequence" width="600"/>
 
+### Figma Mockup:
+https://www.figma.com/file/KefweSLmxGArNsIIRRb2tC/DegreeWiz?type=design&mode=design&t=OsJxfbQWIQ3lHCmF-1
+
 ## Marketing Material
 ### Flyer
 
