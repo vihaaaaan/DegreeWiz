@@ -29,13 +29,6 @@ UML diagrams are shown in the `/doc/uml` folder, and are also shown below.
 ### Sequence Diagram:
 <img src="./doc/uml/sequence_diagram.png" alt="sequence" width="600"/>
 
-## Marketing Materials
-### Flyer
-<img src="./doc/degreewiz_flyer.png" alt="flyer" width="600"/>
-
-### Video
-[![video](http://i3.ytimg.com/vi/W7oEToczG2E/hqdefault.jpg)](https://www.youtube.com/watch?v=W7oEToczG2E)\
-
 *Ryan Jung: jung.876@osu.edu*\
 *Vihaan Vulpala: vulpala.1@osu.edu*\
 *Samara Buchanan: buchanan.375@osu.edu*\
